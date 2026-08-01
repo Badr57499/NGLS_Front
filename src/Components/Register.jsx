@@ -16,7 +16,7 @@ function Register() {
     setSuccess('');
 
     try {
-      await axios.post(`${API_URL}/api/register`, {
+      await axios.post(`https://ngls-backend.vercel.app//api/register`, {
         username,
         password,
       });
