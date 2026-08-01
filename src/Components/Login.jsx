@@ -18,7 +18,7 @@ function Login() {
         setError('')
         setSuccess('')
         try {
-            const response = await axios.post(`${API_URL}/api/login` , {
+            const response = await axios.post(`https://ngls-backend.vercel.app//api/login` , {
                 username,
                 password
             })
