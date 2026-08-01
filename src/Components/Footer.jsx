@@ -1,0 +1,36 @@
+import './Footer.css'
+
+function Footer() {
+  return (
+    <footer className="site-footer" dir="rtl">
+      <div className="footer-content">
+        <div className="footer-section footer-brand">
+          <h3>مدرسة نجيب محفوظ الرسميه لغات</h3>
+          <p>تعليم متميز، قيم ثابتة، ومستقبل أفضل لطلابنا.</p>
+        </div>
+
+        <div className="footer-section footer-links">
+          <h4>روابط سريعة</h4>
+          <nav>
+            <a href="/">الرئيسية</a>
+            <a href="/ans">الأخبار</a>
+            <a href="/videos">الفيديوهات</a>
+            <a href="/login">تسجيل الدخول</a>
+          </nav>
+        </div>
+
+        <div className="footer-section footer-contact">
+          <h4>تواصل معنا</h4>
+          <p>الهاتف: 0123456789</p>
+          <p>البريد: info@ngls.school</p>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <span>© 2026 مدرسة نجيب محفوظ الرسميه لغات. جميع الحقوق محفوظة.</span>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer

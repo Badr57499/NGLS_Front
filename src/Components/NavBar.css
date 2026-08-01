@@ -1,0 +1,208 @@
+.navbar-full{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(42, 41, 41);
+    color: white;
+    font-size: 1.15rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1180px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 12px 16px;
+}
+
+.nav-links a,
+.nav-links .logout-button {
+    color: rgb(121, 106, 188);
+    text-decoration: none;
+}
+.nav-links{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.navbar-account {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: white;
+}
+
+.account-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(108, 92, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+}
+
+.account-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.account-label {
+    font-size: 0.8rem;
+    opacity: 0.75;
+}
+
+.account-name {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.account-role {
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+.logout-button {
+    padding: 10px 16px;
+    background: rgba(108, 92, 255, 0.14);
+    border: 1px solid rgba(108, 92, 255, 0.24);
+    border-radius: 14px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+    background: rgba(108, 92, 255, 0.24);
+    transform: translateY(-1px);
+}
+.drop-down-menu{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+}
+.drop-down-menu button{
+    padding: 10px 15px;
+    background-color: rgb(154, 154, 227);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.drop-down-menu button:hover,
+.drop-down-menu button:focus{
+    background-color: rgb(133, 124, 205);
+}
+
+.dropdown-content{
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: auto;
+    min-width: 160px;
+    max-width: calc(100vw - 24px);
+    background-color: rgba(24, 23, 23, 0.98);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+    padding: 8px 0;
+    z-index: 10;
+    overflow: hidden;
+}
+.dropdown-content a{
+        display: block;
+        padding: 12px 16px;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+        white-space: normal;
+        overflow-wrap: anywhere;
+}
+.dropdown-content a:hover{
+        background-color: rgba(154, 154, 227, 0.18);
+}
+
+@media (max-width: 720px) {
+    .navbar-full{
+        justify-content: center;
+        align-items: stretch;
+        padding: 0;
+    }
+    .navbar{
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px 14px;
+    }
+    .nav-links{
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .nav-links a,
+    .nav-links .logout-button {
+        flex: 1 1 100%;
+        text-align: center;
+        min-width: auto;
+        padding: 10px 0;
+    }
+    .drop-down-menu{
+        width: 100%;
+        align-items: center;
+    }
+    .dropdown-content{
+        right: 8px;
+        left: 8px;
+        width: auto;
+        max-width: calc(100vw - 16px);
+    }
+    .navbar-account {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 14px;
+        margin: 0 auto;
+    }
+    .account-details {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.announcements-navbar {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 720px) {
+    .announcements-navbar {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}

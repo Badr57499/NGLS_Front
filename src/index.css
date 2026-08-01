@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+  font-feature-settings: "liga" 1;
+  text-rendering: optimizeLegibility;
+  background-color: #f8f8fd;
+  color: #1f1d2d;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button, input, textarea {
+  font: inherit;
+}
