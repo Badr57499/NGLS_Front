@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 import './Videos.css';
 
 const API_URL = import.meta.env.VITE_API_URL === undefined ? 'http://localhost:3000' : import.meta.env.VITE_API_URL;
-const API_BASE = `https://ngls-backend.vercel.app//api/videos`;
+const API_BASE = `https://ngls-backend.vercel.app/api/videos`;
 
 function Videos() {
   const { user } = useAuth();
