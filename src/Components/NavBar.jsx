@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../Context/authcontext';
 import './NavBar.css';
 
@@ -25,9 +26,9 @@ function NavBar({ className = '' }) {
             </div>
 
             <div className="nav-links">
-                <a href="/">الرئيسيه</a>
-                <a href="/ans">الأخبار و التحديثات</a>
-                <a href="/videos">الفيديوهات</a>
+                <Link to="/">الرئيسيه</Link>
+                <Link to="/ans">الأخبار و التحديثات</Link>
+                <Link to="/videos">الفيديوهات</Link>
 
                 {user && (
                   <button className="logout-button" onClick={logout}>تسجيل الخروج</button>
@@ -37,7 +38,7 @@ function NavBar({ className = '' }) {
                 <button className="menu-button" onClick={() => setIsOpen(!isOpen)}>المزيد</button>
                 {isOpen && 
                 <div className='dropdown-content'>
-                    <a href='/login'>تسجيل الدخول</a>
+                    <Link to='/login'>تسجيل الدخول</Link>
                 </div>
                 }
             </div>

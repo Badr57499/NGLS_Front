@@ -3,8 +3,8 @@ import axios from 'axios'
 import './Annoucments.css'
 import NavBar from './NavBar'
 
-const API_URL = import.meta.env.VITE_API_URL === undefined ? 'http://localhost:3000' : import.meta.env.VITE_API_URL;
-const API_BASE = `https://ngls-backend.vercel.app/api/ancs`
+const API_URL = import.meta.env.VITE_API_URL || '';
+const API_BASE = `${API_URL}/api/ancs`
 
 function Annoucments() {
     const [announcements, setAnnouncements] = useState([])

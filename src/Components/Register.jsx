@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
-const API_URL = import.meta.env.VITE_API_URL === undefined ? 'http://localhost:3000' : import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || '';
 
 function Register() {
   const [username, setUsername] = useState('');
@@ -16,7 +17,7 @@ function Register() {
     setSuccess('');
 
     try {
-      await axios.post(`https://ngls-backend.vercel.app/api/register`, {
+      await axios.post(`${API_URL}/api/register`, {
         username,
         password,
       });
@@ -62,7 +63,7 @@ function Register() {
           <button className="register-button" type="submit">
             إنشاء حساب
           </button>
-          <p>لديك حساب ؟ <a href="/login">سجل الدخول</a></p>
+          <p>لديك حساب ؟ <Link to="/login">سجل الدخول</Link></p>
 
           {success && <p className="form-note">{success}</p>}
           {error && <p className="form-error">{error}</p>}

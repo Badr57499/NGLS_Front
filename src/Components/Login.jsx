@@ -1,10 +1,10 @@
 import {useState} from 'react'
 import axios from 'axios'
 import './Login.css'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import { useAuth } from '../../Context/authcontext'
 
-const API_URL = import.meta.env.VITE_API_URL === undefined ? 'http://localhost:3000' : import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || '';
 
 function Login() {
     const [username, setUsername] = useState('')
@@ -18,7 +18,7 @@ function Login() {
         setError('')
         setSuccess('')
         try {
-            const response = await axios.post(`https://ngls-backend.vercel.app/api/login` , {
+            const response = await axios.post(`${API_URL}/api/login` , {
                 username,
                 password
             })
@@ -65,7 +65,7 @@ function Login() {
           <button className="register-button" type="submit">
          سجل الدخول
           </button>
-          <p>ليس لديك حساب <a href="/register">انشأ حساب</a></p>
+          <p>ليس لديك حساب <Link to="/register">انشأ حساب</Link></p>
 
           {success && <p className="form-note">تم تسجيل الدخول بنجاح</p>}
           {error && <p className="form-error">لم نتمكن من تسجيل الدخول </p>}
