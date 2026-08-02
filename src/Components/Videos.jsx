@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import api from '../../Context/api';
 import { useAuth } from '../../Context/authcontext';
 import NavBar from './NavBar';
 import './Videos.css';
 
-const API_URL = import.meta.env.VITE_API_URL || '';
-const API_BASE = `${API_URL}/api/videos`;
+const API_BASE = '/api/videos';
 
 function Videos() {
   const { user } = useAuth();
@@ -27,10 +26,7 @@ function Videos() {
   const fetchVideos = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(API_BASE);
-      setVideos(res.data);
-    } catch (err) {
-      setError(err.response?.data?.message || err.message);
+      const res = await api.get(API_BASE);
     } finally {
       setLoading(false);
     }
@@ -60,7 +56,7 @@ function Videos() {
 
     setLoading(true);
     try {
-      const res = await axios.post(
+      const res = await api.post(
         API_BASE,
         { title, description, url },
         { headers: { ...authHeader(), 'Content-Type': 'application/json' } }

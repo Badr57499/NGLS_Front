@@ -1,7 +1,6 @@
 import {createContext , useContext , useState , useEffect} from 'react'
-import axios from 'axios'
+import api from './api'
 const AuthContext = createContext();
-const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:3000' : '')
 
 export default function AuthProvider({children}){
     const [user , setUser] = useState(null)
@@ -14,7 +13,7 @@ export default function AuthProvider({children}){
             return
         }
         try{
-         const res = await axios.get(`${API_URL}/api/me` , {
+         const res = await api.get('/api/me', {
             headers : {Authorization:`Bearer ${token}`}
          });
         setUser(res.data.user)

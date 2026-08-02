@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import api from '../../Context/api'
 import './Annoucments.css'
 import NavBar from './NavBar'
 
-const API_URL = import.meta.env.VITE_API_URL || '';
-const API_BASE = `${API_URL}/api/ancs`
+const API_BASE = '/api/ancs'
 
 function Annoucments() {
     const [announcements, setAnnouncements] = useState([])
@@ -40,7 +39,7 @@ function Annoucments() {
         setError(null)
 
         try {
-            const res = await axios.get(API_BASE, { headers: authHeader() })
+            const res = await api.get(API_BASE, { headers: authHeader() })
             if (Array.isArray(res.data)) {
                 setAnnouncements(res.data)
             } else {
@@ -105,7 +104,7 @@ function Annoucments() {
 
     const createAnnouncement = async (payload) => {
         try {
-            const res = await axios.post(API_BASE, payload, {
+            const res = await api.post(API_BASE, payload, {
                 headers: {
                     ...authHeader(),
                     'Content-Type': 'multipart/form-data'
@@ -122,7 +121,7 @@ function Annoucments() {
 
     const updateAnnouncement = async (id, payload) => {
         try {
-            const res = await axios.put(`${API_BASE}/${id}`, payload, {
+            const res = await api.put(`${API_BASE}/${id}`, payload, {
                 headers: {
                     ...authHeader(),
                     'Content-Type': 'multipart/form-data'
@@ -142,7 +141,7 @@ function Annoucments() {
         setSuccess(null)
 
         try {
-            await axios.delete(`${API_BASE}/${id}`, {
+            await api.delete(`${API_BASE}/${id}`, {
                 headers: authHeader()
             })
             setAnnouncements((prev) => prev.filter((item) => item._id !== id))

@@ -1,10 +1,8 @@
 import {useState} from 'react'
-import axios from 'axios'
+import api from '../../Context/api'
 import './Login.css'
 import {useNavigate, Link} from 'react-router-dom'
 import { useAuth } from '../../Context/authcontext'
-
-const API_URL = import.meta.env.VITE_API_URL || '';
 
 function Login() {
     const [username, setUsername] = useState('')
@@ -18,17 +16,18 @@ function Login() {
         setError('')
         setSuccess('')
         try {
-            const response = await axios.post(`${API_URL}/api/login` , {
+            const response = await api.post('/api/login', {
                 username,
                 password
             })
             const token = response.data.token
             localStorage.setItem('token' , token)
+            setUser(response.data.user)
             setSuccess(true)
             Navigate('/')
-            setUser(response.data.user)
         } catch (err) {
-            setError(true)
+            const message = err.response?.data?.message || 'لم نتمكن من تسجيل الدخول'
+            setError(message)
         }
     }
     return(
@@ -68,7 +67,7 @@ function Login() {
           <p>ليس لديك حساب <Link to="/register">انشأ حساب</Link></p>
 
           {success && <p className="form-note">تم تسجيل الدخول بنجاح</p>}
-          {error && <p className="form-error">لم نتمكن من تسجيل الدخول </p>}
+          {error && <p className="form-error">{error}</p>}
         </form>
       </div>
     </div>
