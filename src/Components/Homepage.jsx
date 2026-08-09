@@ -9,7 +9,7 @@ function HomePage () {
             <div className='Hero' >
                 <div className='First'>
                 <h1>مدرسة نجيب محفوظ الرسميه لغات</h1>
-                <p>موسسه تهدف الي خلق جيل واعي و قادر على مواجهة تحديات الحياة</p>
+                <p>مؤسسه تهدف الي خلق جيل واعي و قادر على مواجهة تحديات الحياة</p>
                 <button>المزيد</button>
                 </div>
               <div className='Hero-image'>
