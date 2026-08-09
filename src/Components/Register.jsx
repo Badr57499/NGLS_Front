@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import api from '../../Context/api';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Register.css';
 
 function Register() {
@@ -19,13 +19,14 @@ function Register() {
         username,
         password,
       });
-      setSuccess('تم إنشاء الحساب بنجاح');
-      setUsername('');
-      setPassword('');
+      // Redirect to login after successful registration
+      navigate('/login');
     } catch (error) {
       setError('حدث خطأ أثناء التسجيل. حاول مرة أخرى.');
     }
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="register-page">
