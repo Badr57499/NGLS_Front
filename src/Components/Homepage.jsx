@@ -12,9 +12,9 @@ function HomePage () {
                 <p>مؤسسه تهدف الي خلق جيل واعي و قادر على مواجهة تحديات الحياة</p>
                 <button>المزيد</button>
                 </div>
-              <div className='Hero-image'>
+             /* <div className='Hero-image'>
                 <img src={hero} alt='Hero' />
-              </div>
+              </div> */
             </div>
             <div className='why'>
                 <h2>من نحن </h2>
