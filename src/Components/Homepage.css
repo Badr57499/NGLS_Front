@@ -1,5 +1,5 @@
 .First {
-  text-align: left;
+  text-align: center;
   font-size: clamp(1.4rem, 2.1vw, 2.1rem);
   margin-top: 0;
   max-width: 620px;
