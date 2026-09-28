@@ -25,10 +25,12 @@
   min-height: min(65vh, 720px);
   padding: 56px 48px 36px;
   background-repeat: no-repeat;
-  display: grid;
-  grid-template-columns: minmax(300px, 1.25fr) minmax(280px, 1fr);
-  gap: 40px;
-  align-items: start;
+
+  /* Center .First both vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .First button {
@@ -128,7 +130,10 @@
   .Hero {
     padding: 40px 24px;
     height: auto;
-    grid-template-columns: 1fr;
+    /* keep centered layout on small screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .Hero-image {
