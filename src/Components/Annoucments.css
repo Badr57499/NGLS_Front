@@ -1,8 +1,5 @@
 @media (max-width: 720px) {
-  .announcements-page,
-  .videos-page,
-  .announcements-navbar,
-  .videos-navbar {
+  .announcements-page {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -10,17 +7,22 @@
     padding: 0;
   }
 
-  .announcements-page .navbar-full,
-  .videos-page .navbar-full {
+  .announcements-navbar {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .announcements-page .navbar-full {
     display: block !important;
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
-    background: rgb(42, 41, 41) !important;
   }
 
-  .announcements-page .navbar,
-  .videos-page .navbar {
+  .announcements-page .navbar {
     display: block !important;
     width: 100% !important;
     margin: 0 !important;
@@ -28,16 +30,14 @@
     text-align: center !important;
   }
 
-  .announcements-page .navbar-logo,
-  .videos-page .navbar-logo {
+  .announcements-page .navbar-logo {
     display: block !important;
     width: 100% !important;
     text-align: center !important;
     margin: 0 0 10px !important;
   }
 
-  .announcements-page .nav-links,
-  .videos-page .nav-links {
+  .announcements-page .nav-links {
     display: none !important;
     width: 100% !important;
     text-align: center !important;
@@ -49,15 +49,12 @@
     gap: 10px !important;
   }
 
-  .announcements-page .nav-links.open,
-  .videos-page .nav-links.open {
+  .announcements-page .nav-links.open {
     display: flex !important;
   }
 
   .announcements-page .nav-links a,
-  .videos-page .nav-links a,
-  .announcements-page .nav-links .logout-button,
-  .videos-page .nav-links .logout-button {
+  .announcements-page .nav-links .logout-button {
     display: block !important;
     width: min(220px, 100%) !important;
     margin: 10px auto !important;
@@ -66,8 +63,7 @@
     box-sizing: border-box !important;
   }
 
-  .announcements-page .drop-down-menu,
-  .videos-page .drop-down-menu {
+  .announcements-page .drop-down-menu {
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
@@ -75,15 +71,13 @@
     margin-top: 8px !important;
   }
 
-  .announcements-page .menu-button,
-  .videos-page .menu-button {
+  .announcements-page .menu-button {
     display: block !important;
     width: min(220px, 100%) !important;
     margin: 0 auto !important;
   }
 
-  .announcements-page .dropdown-content,
-  .videos-page .dropdown-content {
+  .announcements-page .dropdown-content {
     position: absolute !important;
     right: 50% !important;
     left: auto !important;
@@ -92,8 +86,7 @@
     max-width: calc(100vw - 32px) !important;
   }
 
-  .announcements-page .navbar-account,
-  .videos-page .navbar-account {
+  .announcements-page .navbar-account {
     display: flex !important;
     justify-content: center !important;
     width: min(260px, 100%) !important;
