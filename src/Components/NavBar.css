@@ -26,6 +26,7 @@
   font-weight: 700;
   line-height: 1.5;
   color: #ffffff;
+  letter-spacing: 0;
 }
 
 .navbar-account {
@@ -98,6 +99,10 @@
   font-weight: 700;
 }
 
+.nav-links a {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
 .nav-links a:hover {
   opacity: 0.9;
   transform: translateY(-1px);
@@ -111,14 +116,16 @@
   color: #fff;
   cursor: pointer;
   font: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+  background: rgba(108, 92, 255, 0.22);
 }
 
 .drop-down-menu {
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
   display: none;
+  position: relative;
   z-index: 20;
 }
 
@@ -152,6 +159,10 @@
   text-decoration: none;
   color: #ffffff;
   text-align: center;
+}
+
+.dropdown-content a:hover {
+  background: rgba(154, 154, 227, 0.18);
 }
 
 @media (max-width: 720px) {
@@ -192,6 +203,8 @@
     padding: 0 0 12px;
     flex-direction: column;
     gap: 12px;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-links.open {
@@ -224,6 +237,7 @@
   .dropdown-content {
     position: absolute;
     left: 50%;
+    top: auto;
     transform: translateX(-50%);
     width: min(220px, calc(100vw - 32px));
   }
