@@ -1,123 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body, #root {
+  min-height: 100%;
   margin: 0;
   padding: 0;
-  min-height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+  font-feature-settings: "liga" 1;
+  text-rendering: optimizeLegibility;
+  background-color: #f8f8fd;
+  color: #1f1d2d;
 }
 
-#root {
-  margin: 0;
-  padding: 0;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.main {
-  margin: 0;
-  padding: 0;
+a {
+  color: inherit;
 }
 
-.navbar-full,
-.navbar,
-.nav-links,
-.drop-down-menu,
-.dropdown-content,
-.navbar-account,
-.navbar-logo,
-.account-details,
-.account-avatar {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-@media (max-width: 720px) {
-  .navbar-full {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: rgb(42, 41, 41) !important;
-  }
-
-  .navbar {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 12px 14px 0 !important;
-    text-align: center !important;
-  }
-
-  .navbar-logo {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin: 0 0 10px !important;
-    font-size: 1.1rem !important;
-    line-height: 1.5 !important;
-  }
-
-  .nav-links {
-    display: none !important;
-    width: 100% !important;
-    text-align: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-  }
-
-  .nav-links.open {
-    display: flex !important;
-  }
-
-  .nav-links a,
-  .nav-links .logout-button {
-    display: block !important;
-    width: min(220px, 100%) !important;
-    margin: 10px auto !important;
-    text-align: center !important;
-    padding: 10px 12px !important;
-    box-sizing: border-box !important;
-  }
-
-  .drop-down-menu {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-top: 8px !important;
-  }
-
-  .drop-down-menu button,
-  .menu-button {
-    width: min(220px, 100%) !important;
-    display: block !important;
-    margin: 0 auto !important;
-  }
-
-  .dropdown-content {
-    position: absolute !important;
-    right: 50% !important;
-    left: auto !important;
-    transform: translateX(50%) !important;
-    width: min(220px, calc(100vw - 32px)) !important;
-    max-width: calc(100vw - 32px) !important;
-  }
-
-  .navbar-account {
-    display: flex !important;
-    justify-content: center !important;
-    width: min(260px, 100%) !important;
-    margin: 0 auto !important;
-    padding: 10px 14px !important;
-  }
-
-  .account-details {
-    align-items: center !important;
-    text-align: center !important;
-  }
+button, input, textarea {
+  font: inherit;
 }
