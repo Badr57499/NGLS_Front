@@ -14,12 +14,12 @@ function NavBar({ className = '' }) {
   ];
 
   return (
-    <div className={`navbar-full ${className}`.trim()}>
-      <div className="navbar">
-        <div className="navbar-logo">مدرسة نجيب محفوظ الرسميه لغات</div>
+    <header className={`navbar-full ${className}`.trim()}>
+      <div className="navbar-inner">
+        <div className="navbar-brand">مدرسة نجيب محفوظ الرسميه لغات</div>
 
         {user && (
-          <div className="navbar-account">
+          <div className="navbar-account" aria-label="حساب المستخدم">
             <div className="account-avatar">
               {user.username?.charAt(0).toUpperCase()}
             </div>
@@ -32,28 +32,32 @@ function NavBar({ className = '' }) {
         )}
       </div>
 
-      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+      <nav className={`nav-links ${isOpen ? 'open' : ''}`} aria-label="Main navigation">
         {navItems.map((item) => (
-          <Link key={item.to} to={item.to}>{item.label}</Link>
+          <Link key={item.to} to={item.to} onClick={() => setIsOpen(false)}>
+            {item.label}
+          </Link>
         ))}
 
         {user && (
-          <button className="logout-button" onClick={logout}>تسجيل الخروج</button>
+          <button type="button" className="logout-button" onClick={logout}>
+            تسجيل الخروج
+          </button>
         )}
-      </div>
+      </nav>
 
       <div className="drop-down-menu">
-        <button className="menu-button" onClick={() => setIsOpen(!isOpen)}>
+        <button type="button" className="menu-button" onClick={() => setIsOpen((prev) => !prev)}>
           المزيد
         </button>
 
         {isOpen && (
           <div className="dropdown-content">
-            <Link to="/login">تسجيل الدخول</Link>
+            <Link to="/login" onClick={() => setIsOpen(false)}>تسجيل الدخول</Link>
           </div>
         )}
       </div>
-    </div>
+    </header>
   );
 }
 
