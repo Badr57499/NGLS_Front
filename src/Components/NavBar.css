@@ -1,230 +1,247 @@
-.navbar-full{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 0;
-    margin: 0;
-    background-color: rgb(42, 41, 41);
-    color: white;
-    font-size: 1.15rem;
-    width: 100%;
-    box-sizing: border-box;
+.navbar-full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(42, 41, 41);
+  color: white;
+  font-size: 1.15rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    max-width: 1180px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1180px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 12px 16px;
 }
 
 .navbar-logo {
-    text-align: center;
-    width: 100%;
-    font-weight: 700;
-    line-height: 1.4;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .nav-links a,
 .nav-links .logout-button {
-    color: rgb(121, 106, 188);
-    text-decoration: none;
+  color: rgb(121, 106, 188);
+  text-decoration: none;
 }
-.nav-links{
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .navbar-account {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 16px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: white;
 }
 
 .account-avatar {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: rgba(108, 92, 255, 0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1rem;
-    color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(108, 92, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
 }
 
 .account-details {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    line-height: 1.2;
-    text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1.2;
+  text-align: right;
 }
 
 .account-label {
-    font-size: 0.8rem;
-    opacity: 0.75;
+  font-size: 0.8rem;
+  opacity: 0.75;
 }
 
 .account-name {
-    font-weight: 700;
-    font-size: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .account-role {
-    font-size: 0.8rem;
-    opacity: 0.85;
+  font-size: 0.8rem;
+  opacity: 0.85;
 }
 
 .logout-button {
-    padding: 10px 16px;
-    background: rgba(108, 92, 255, 0.14);
-    border: 1px solid rgba(108, 92, 255, 0.24);
-    border-radius: 14px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+  padding: 10px 16px;
+  background: rgba(108, 92, 255, 0.14);
+  border: 1px solid rgba(108, 92, 255, 0.24);
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .logout-button:hover {
-    background: rgba(108, 92, 255, 0.24);
-    transform: translateY(-1px);
-}
-.drop-down-menu{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: flex-end;
-}
-.drop-down-menu button{
-    padding: 10px 15px;
-    background-color: rgb(154, 154, 227);
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+  background: rgba(108, 92, 255, 0.24);
+  transform: translateY(-1px);
 }
 
+.drop-down-menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end;
+}
+
+.menu-button,
+.drop-down-menu button {
+  padding: 10px 15px;
+  background-color: rgb(154, 154, 227);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #1f1d2d;
+  font-weight: 700;
+}
+
+.menu-button:hover,
+.menu-button:focus,
 .drop-down-menu button:hover,
-.drop-down-menu button:focus{
-    background-color: rgb(133, 124, 205);
+.drop-down-menu button:focus {
+  background-color: rgb(133, 124, 205);
 }
 
-.dropdown-content{
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 0;
-    left: auto;
-    min-width: 160px;
-    max-width: calc(100vw - 24px);
-    background-color: rgba(24, 23, 23, 0.98);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
-    padding: 8px 0;
-    z-index: 10;
-    overflow: hidden;
+.dropdown-content {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  left: auto;
+  min-width: 160px;
+  max-width: calc(100vw - 24px);
+  background-color: rgba(24, 23, 23, 0.98);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+  padding: 8px 0;
+  z-index: 10;
+  overflow: hidden;
 }
-.dropdown-content a{
-        display: block;
-        padding: 12px 16px;
-        color: white;
-        text-decoration: none;
-        transition: background-color 0.2s ease;
-        white-space: normal;
-        overflow-wrap: anywhere;
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
-.dropdown-content a:hover{
-        background-color: rgba(154, 154, 227, 0.18);
+
+.dropdown-content a:hover {
+  background-color: rgba(154, 154, 227, 0.18);
 }
 
 @media (max-width: 720px) {
   .navbar-full {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
     width: 100%;
-    margin: 0;
     padding: 0;
-    background-color: rgb(42, 41, 41);
   }
 
   .navbar {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    margin: 0;
-    padding: 12px 14px;
     text-align: center;
+    gap: 10px;
+    padding: 12px 14px 0;
   }
 
   .navbar-logo {
-    display: block;
     width: 100%;
     text-align: center;
-    margin: 0 0 10px;
+    margin: 0;
     font-size: 1.1rem;
     line-height: 1.5;
   }
 
   .nav-links {
-    display: block;
+    display: none;
     width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 14px 8px;
+  }
+
+  .nav-links.open {
+    display: flex;
   }
 
   .nav-links a,
   .nav-links .logout-button {
-    display: block;
     width: min(220px, 100%);
-    margin: 10px auto;
+    display: block;
     text-align: center;
     padding: 10px 12px;
+    margin: 0;
     box-sizing: border-box;
   }
 
   .drop-down-menu {
     width: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 8px;
+    justify-content: center;
+    margin: 0;
   }
 
-  .drop-down-menu button {
-    width: min(220px, 100%);
+  .menu-button {
     display: block;
+    width: min(220px, 100%);
     margin: 0 auto;
   }
 
   .dropdown-content {
     position: absolute;
     right: 50%;
+    left: auto;
     transform: translateX(50%);
     width: min(220px, calc(100vw - 32px));
     max-width: calc(100vw - 32px);
-    left: auto;
   }
 
   .navbar-account {
-    display: flex;
-    justify-content: center;
     width: min(260px, 100%);
-    margin: 0 auto;
+    justify-content: center;
     padding: 10px 14px;
+    margin: 0 auto;
   }
 
   .account-details {
@@ -234,14 +251,14 @@
 }
 
 .announcements-navbar {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 720px) {
-    .announcements-navbar {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
+  .announcements-navbar {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }
