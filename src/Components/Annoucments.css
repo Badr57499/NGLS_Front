@@ -1,81 +1,8 @@
-.announcements-page {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #f8f7ff 0%, #ffffff 60%, #eef1ff 100%);
-  overflow-x: hidden;
-}
-
-.announcements-navbar {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.announcements-page h2,
-.announcements-page h3 {
-  margin: 0;
-  color: #241452;
-  font-weight: 800;
-}
-
-.announcements-form-card,
-.announcements-list-card {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto 24px;
-  padding: 28px 24px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(108, 92, 255, 0.12);
-  box-shadow: 0 24px 60px rgba(22, 16, 70, 0.08);
-}
-
-.announcements-form {
-  display: grid;
-  gap: 16px;
-}
-
-.announcements-form input,
-.announcements-form textarea,
-.announcements-form button {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.announcements-form button {
-  background: linear-gradient(135deg, #6c5cff, #4a8cff);
-  color: white;
-  border: none;
-  border-radius: 14px;
-  padding: 12px 18px;
-  cursor: pointer;
-}
-
-.announcements-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 16px;
-}
-
-.announcement-item {
-  background: #ffffff;
-  border: 1px solid rgba(108, 92, 255, 0.12);
-  border-radius: 18px;
-  padding: 18px;
-  box-shadow: 0 14px 30px rgba(22, 16, 70, 0.08);
-}
-
 @media (max-width: 720px) {
   .announcements-page,
-  .announcements-navbar {
+  .videos-page,
+  .announcements-navbar,
+  .videos-navbar {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -83,7 +10,8 @@
     padding: 0;
   }
 
-  .announcements-page .navbar-full {
+  .announcements-page .navbar-full,
+  .videos-page .navbar-full {
     display: block !important;
     width: 100% !important;
     margin: 0 !important;
@@ -91,7 +19,8 @@
     background: rgb(42, 41, 41) !important;
   }
 
-  .announcements-page .navbar {
+  .announcements-page .navbar,
+  .videos-page .navbar {
     display: block !important;
     width: 100% !important;
     margin: 0 !important;
@@ -99,14 +28,16 @@
     text-align: center !important;
   }
 
-  .announcements-page .navbar-logo {
+  .announcements-page .navbar-logo,
+  .videos-page .navbar-logo {
     display: block !important;
     width: 100% !important;
     text-align: center !important;
     margin: 0 0 10px !important;
   }
 
-  .announcements-page .nav-links {
+  .announcements-page .nav-links,
+  .videos-page .nav-links {
     display: none !important;
     width: 100% !important;
     text-align: center !important;
@@ -118,12 +49,15 @@
     gap: 10px !important;
   }
 
-  .announcements-page .nav-links.open {
+  .announcements-page .nav-links.open,
+  .videos-page .nav-links.open {
     display: flex !important;
   }
 
   .announcements-page .nav-links a,
-  .announcements-page .nav-links .logout-button {
+  .videos-page .nav-links a,
+  .announcements-page .nav-links .logout-button,
+  .videos-page .nav-links .logout-button {
     display: block !important;
     width: min(220px, 100%) !important;
     margin: 10px auto !important;
@@ -132,7 +66,8 @@
     box-sizing: border-box !important;
   }
 
-  .announcements-page .drop-down-menu {
+  .announcements-page .drop-down-menu,
+  .videos-page .drop-down-menu {
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
@@ -140,13 +75,15 @@
     margin-top: 8px !important;
   }
 
-  .announcements-page .menu-button {
+  .announcements-page .menu-button,
+  .videos-page .menu-button {
     display: block !important;
     width: min(220px, 100%) !important;
     margin: 0 auto !important;
   }
 
-  .announcements-page .dropdown-content {
+  .announcements-page .dropdown-content,
+  .videos-page .dropdown-content {
     position: absolute !important;
     right: 50% !important;
     left: auto !important;
@@ -155,7 +92,8 @@
     max-width: calc(100vw - 32px) !important;
   }
 
-  .announcements-page .navbar-account {
+  .announcements-page .navbar-account,
+  .videos-page .navbar-account {
     display: flex !important;
     justify-content: center !important;
     width: min(260px, 100%) !important;
