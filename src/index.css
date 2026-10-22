@@ -27,3 +27,107 @@ a {
 button, input, textarea {
   font: inherit;
 }
+@media (max-width: 720px) {
+  .navbar-full,
+  .navbar-full.navbar-full {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    background-color: rgb(42, 41, 41) !important;
+  }
+
+  .navbar,
+  .navbar-full .navbar {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 12px 14px 0 !important;
+    text-align: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .navbar-logo,
+  .navbar-full .navbar-logo {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 0 10px !important;
+    font-size: 1.1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .nav-links,
+  .navbar-full .nav-links {
+    display: none !important;
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 0 14px 8px !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .nav-links.open,
+  .navbar-full .nav-links.open {
+    display: flex !important;
+  }
+
+  .nav-links a,
+  .nav-links .logout-button,
+  .navbar-full .nav-links a,
+  .navbar-full .nav-links .logout-button {
+    display: block !important;
+    width: min(220px, 100%) !important;
+    margin: 10px auto !important;
+    text-align: center !important;
+    padding: 10px 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .drop-down-menu,
+  .navbar-full .drop-down-menu {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 8px !important;
+  }
+
+  .menu-button,
+  .navbar-full .menu-button {
+    display: block !important;
+    width: min(220px, 100%) !important;
+    margin: 0 auto !important;
+  }
+
+  .dropdown-content,
+  .navbar-full .dropdown-content {
+    position: absolute !important;
+    right: 50% !important;
+    left: auto !important;
+    transform: translateX(50%) !important;
+    width: min(220px, calc(100vw - 32px)) !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
+  .navbar-account,
+  .navbar-full .navbar-account {
+    display: flex !important;
+    justify-content: center !important;
+    width: min(260px, 100%) !important;
+    margin: 0 auto !important;
+    padding: 10px 14px !important;
+  }
+
+  .account-details,
+  .navbar-full .account-details {
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
