@@ -24,14 +24,7 @@
   font-weight: 800;
 }
 
-.announcements-form-card {
-  animation: fadeInUp 0.45s ease;
-}
-
-.announcements-form {
-  display: grid;
-}
-
+.announcements-form-card,
 .announcements-list-card {
   width: 100%;
   max-width: 1180px;
@@ -41,25 +34,6 @@
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(108, 92, 255, 0.12);
   box-shadow: 0 24px 60px rgba(22, 16, 70, 0.08);
-}
-
-.announcements-form-card {
-  width: 100%;
-  max-width: 1180px;
-  margin: 0 auto 24px;
-  padding: 28px 24px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(108, 92, 255, 0.12);
-  box-shadow: 0 24px 60px rgba(22, 16, 70, 0.08);
-  cursor:pointer;
-}
-
-.announcements-page h2,
-.announcements-page h3 {
-  margin: 0;
-  color: #241452;
-  font-weight: 800;
 }
 
 .announcements-form {
@@ -97,72 +71,6 @@
   border-radius: 18px;
   padding: 18px;
   box-shadow: 0 14px 30px rgba(22, 16, 70, 0.08);
-}
-
-.announcement-content h4 {
-  margin: 0 0 8px;
-  color: #241452;
-}
-
-.announcement-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 14px;
-}
-
-.announcement-actions button,
-.cancel-button {
-  padding: 10px 14px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.announcement-image img,
-.announcement-modal-image img {
-  width: 100%;
-  max-height: 250px;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-.announcement-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.announcement-modal {
-  width: min(760px, calc(100% - 24px));
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  position: relative;
-}
-
-.announcement-modal-close {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  border: none;
-  background: transparent;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-@media (max-width: 920px) {
-  .announcements-page {
-    overflow-x: hidden;
-  }
-
-  .announcements-form-card,
-  .announcements-list-card {
-    padding: 22px;
-  }
 }
 
 @media (max-width: 720px) {
@@ -253,22 +161,5 @@
     width: min(260px, 100%) !important;
     margin: 0 auto !important;
     padding: 10px 14px !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .announcements-page {
-    gap: 20px;
-  }
-
-  .announcements-form-card,
-  .announcements-list-card {
-    padding: 18px;
-    border-radius: 20px;
-  }
-
-  .announcements-navbar {
-    width: 100%;
-    padding: 0;
   }
 }
